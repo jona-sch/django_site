@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_content %}
+
+
+
+
+
+<div class="text-center"
+	style="background: url('/static/images/background_mountains.jpg') 50% 0 no-repeat;
+     color: white;
+     height: 550px;
+     ">
+
+<img style="position: relative; top: 50%; transform: translateY(-50%);
+min-height: 50px;max-height: 350px;min-width: 50px maxwidth: 350px;border-radius:50%;" alt="Profile picture" src="{% static 'images/jona_profile.jpg' %}" class="img-fluid" />
+
+</div>
+
+
+<div class="container text-center">
+
+
+<br>
+
+<h4 style="color: #6EBFCF;"><b>JONA SCHMATZLER</b></h4>
+
+<br>
+
+<p>Student in Computer Science at ISAE-SUPAERO engineering school in Toulouse, France.</p>
+
+<p>Final year of Masters of Engineering - major in CS, minor in Neurology-AI. Graduating mid 2022.</p>
+
+<p>Looking for an internship in Sweden or Norway from April 2022.</p>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_content %}
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-8">
+        
+        <h3 style="color: #6EBFCF;" class="text-center"><b>EXPERIENCE</b></h3>
+
+        {% for experience in experiences %}
+        
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+
+            <h4 style="color: #054B59;" class="card-title"><b>{{ experience.job }}</b></h4>
+
+                <p class="card-text">
+                <ul>
+                  <li><b>{{ experience.company }}</b>, {{ experience.location }}</li>
+                  <li>{{ experience.description }}</li>
+                  <li><b>Technologies</b>: {{ experience.technologies }}</li>
+                  <li><b>Date</b>: {{ experience.date_begin }} &#x21E8; {{ experience.date_end }}</li>
+                </ul>
+                </p>
+
+
+        </a>
+
+        {% endfor %}
+    </div>
+    <div class="col-md-4">
+      <div id = "skills" class="sticky-top">
+        <h3 style="color: #6EBFCF;"><b>SKILLS</b></h3>
+        <ul class="list-unstyledunstyled">
+          <li>C</li>
+          <li>C++</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>Django</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Linux</li>
+          <li>Windows</li>
+        </ul>
+        <br>
+      </div>
+    </div>
+</div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+  var navbar_height = document.querySelector('.navbar').offsetHeight;
+  console.log(navbar_height);
+  document.getElementById("skills").style.top = navbar_height*1.25 + 'px';
+  
+});
+</script>
+
+
+{% endblock %}
+
